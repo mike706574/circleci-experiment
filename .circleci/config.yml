@@ -39,9 +39,9 @@ jobs:
 
       - run: mvn install
 
-      - run: mvn -s .circleci/settings.xml release:prepare
+      - run: mvn -s .circleci/settings.xml -B release:prepare
 
-      - run: mvn -s .circleci/settings.xml release:perform
+      - run: mvn -s .circleci/settings.xml -B release:perform
 
       - store_test_results:
           path: target
